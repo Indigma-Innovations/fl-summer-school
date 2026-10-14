@@ -338,7 +338,7 @@ Likewise, the poisoning and FLTrust results characterize the controlled setup im
 
 The repository code is released under the **Apache License 2.0**. See [`LICENSE`](LICENSE).
 
-The repository also uses third-party datasets, pretrained model weights, Python libraries, and other dependencies. Those external components are **not relicensed by this repository** and remain subject to their respective licenses and terms.
+This repository includes third-party pretrained model weights and uses the Google Quick, Draw! dataset. See [`NOTICE`](NOTICE) for attribution and licensing information.
 
 ## Acknowledgment
 

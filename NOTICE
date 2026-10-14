@@ -1,0 +1,32 @@
+Federated Art Chase
+Copyright 2026 Indigma Innovations
+
+This project is distributed under the Apache License, Version 2.0.
+See the LICENSE file for the full license text.
+
+THIRD-PARTY MODEL ATTRIBUTION
+
+The fine-tuned model distributed at:
+
+artifacts/centralized_finetuning/mobilenetv4_small_quickdraw10.safetensors
+
+is derived from the following pretrained model:
+
+Model: MobileNetV4-Conv-Small-0.5
+Identifier: mobilenetv4_conv_small_050.e3000_r224_in1k
+Pretrained weights: Ross Wightman
+Source: https://huggingface.co/timm/mobilenetv4_conv_small_050.e3000_r224_in1k
+License: Apache License 2.0
+
+The original ImageNet-1k classification head was replaced with a ten-class classifier, and the complete network was subsequently fine-tuned on the Google Quick, Draw! dataset by Indigma Innovations.
+
+DATASET ATTRIBUTION
+
+Dataset: Google Quick, Draw!
+Source: https://github.com/googlecreativelab/quickdraw-dataset
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The dataset is used for training and evaluation. The original dataset is not redistributed as part of this repository.
+
+The third-party components retain their respective licenses. This NOTICE provides attribution and does not modify the terms of those licenses.
+
