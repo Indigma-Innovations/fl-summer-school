@@ -17,6 +17,19 @@ The material is designed for teaching, experimentation, and reproducible researc
 | 5 | `05.Federated_Learning_Data_Poisoning.ipynb` | Data poisoning | Reuses the exact clients from Notebook 4 and evaluates label-flipping and backdoor poisoning under FedAvg. |
 | 6 | `06.Federated_Learning_Data_Poisoning_FLTrust.ipynb` | Robust aggregation | Repeats the poisoning experiments with FLTrust and compares robustness with the FedAvg baseline. |
 
+## Fine-Tuned Model
+
+The repository includes the centrally fine-tuned MobileNetV4-Conv-Small-0.5 model used throughout the experiments.
+
+| File | Description |
+|---|---|
+| [mobilenetv4_small_quickdraw10.safetensors](artifacts/centralized_finetuning/mobilenetv4_small_quickdraw10.safetensors) | Complete fine-tuned model checkpoint |
+| [config.json](artifacts/centralized_finetuning/config.json) | Model configuration, class labels, and preprocessing settings |
+
+The checkpoint was initialized from the ImageNet-1k pretrained [`mobilenetv4_conv_small_050.e3000_r224_in1k`](https://huggingface.co/timm/mobilenetv4_conv_small_050.e3000_r224_in1k) model and centrally fine-tuned on ten classes of Google's Quick, Draw! dataset.
+
+The resulting model achieves **97.50% test accuracy** and serves as the common initialization for the federated fine-tuning, privacy leakage, and data poisoning experiments.
+
 ## Experimental task
 
 The common classification task contains 10 QuickDraw classes:
@@ -320,20 +333,6 @@ Use these experiments only on systems, models, and data for which you have autho
 The reconstruction results are experiment-specific demonstrations and should not be interpreted as showing that every federated-learning configuration leaks the same information. Leakage depends on the model, observable update, local training procedure, batch size, aggregation, prior knowledge, and other assumptions.
 
 Likewise, the poisoning and FLTrust results characterize the controlled setup implemented here and should not be generalized to all FL deployments without additional evaluation.
-
-## Suggested repository structure
-
-```text
-.
-├── README.md
-├── LICENSE
-├── 01.Centralized_Fine_tuning_of_QuickDraw_Dataset_MobileNet_V4.ipynb
-├── 02.Single_User_Finetuning_and_Server_Attack.ipynb
-├── 03.One_Round_FedAvg_Global_Update_Attack.ipynb
-├── 04.Full_Federated_Learning_No_Attack.ipynb
-├── 05.Federated_Learning_Data_Poisoning.ipynb
-└── 06.Federated_Learning_Data_Poisoning_FLTrust.ipynb
-```
 
 ## License
 

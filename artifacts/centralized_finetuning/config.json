@@ -1,0 +1,73 @@
+{
+  "model_name": "mobilenetv4_conv_small_050.e3000_r224_in1k",
+  "num_classes": 10,
+  "class_names": [
+    "line",
+    "circle",
+    "square",
+    "triangle",
+    "star",
+    "tshirt",
+    "smiley_face",
+    "sun",
+    "cloud",
+    "donut"
+  ],
+  "quickdraw_file_names": [
+    "line",
+    "circle",
+    "square",
+    "triangle",
+    "star",
+    "t-shirt",
+    "smiley_face",
+    "sun",
+    "cloud",
+    "donut"
+  ],
+  "input_size": [
+    3,
+    224,
+    224
+  ],
+  "mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "std": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "best_epoch": 9,
+  "best_val_accuracy": 97.54,
+  "final_metrics": {
+    "train": {
+      "loss": 0.2871615408609311,
+      "accuracy": 90.77774439102564
+    },
+    "val": {
+      "loss": 0.10071476451139898,
+      "accuracy": 97.54
+    },
+    "test": {
+      "loss": 0.11147566536664963,
+      "accuracy": 97.18
+    }
+  },
+  "baseline_metrics": {
+    "train": {
+      "loss": 7.810980469752581,
+      "accuracy": 6.966145833333333
+    },
+    "val": {
+      "loss": 8.58070397491455,
+      "accuracy": 5.64
+    },
+    "test": {
+      "loss": 8.569508764648438,
+      "accuracy": 6.0
+    }
+  }
+}
